@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Decision Maker - Solution</title>
+  <link rel="stylesheet" href="ws.css">
+</head>
+<body>
+  <h1>Weather Decision Maker</h1>
+  
+  <div class="box">
+    <h2>Enter Details</h2>
+    
+    <label>Temperature (°C):</label><br>
+    <input type="number" id="tempInput" placeholder="e.g. 25" /><br><br>
+    
+    <label>Is it raining?</label><br>
+    <input type="checkbox" id="rainCheck" /><br><br>
+    
+    <label>Do you have an umbrella?</label><br>
+    <input type="checkbox" id="umbrellaCheck" /><br><br>
+    
+    <button onclick="giveAdvice()">Get Advice</button>
+    
+    <p id="result"></p>
+  </div>
+
+  <script src="ws.js"></script>
+</body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monthly Project Dashboard – January 2026</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+            background: #fafafa;
+        }
+
+        h1 {
+            text-align: center;
+            color: #1a3c5e;
+        }
+
+        table {
+            width: 100%;
+            max-width: 1100px;
+            margin: 20px auto;
+            border-collapse: collapse;
+            font-size: 0.95em;
+            box-shadow: 0 1px 4px #ddd;
+            background: white;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #cbd5e0;
+            text-align: left;
+        }
+
+        thead {
+            color: white;
+        }
+
+        thead tr:first-child {
+            background: #2c5282;
+        }
+
+        thead tr:nth-child(2) {
+            background: #2b6cb0;
+        }
+
+        .group-header {
+            background: #edf2f7;
+            font-weight: bold;
+        }
+
+        .status-done    { background: #d1fae5; text-align: center; }
+        .status-review  { background: #fefcbf; text-align: center; }
+        .status-started { background: #fed7d7; }
+        .status-progress{ background: #fefcbf; }
+        .status-testing { background: #d1fae5; }
+
+        .progress-cell {
+            text-align: center;
+            font-weight: bold;
+        }
+
+        .notes {
+            font-size: 0.9em;
+        }
+
+        tfoot {
+            background: #e2e8f0;
+            font-size: 0.9em;
+        }
+
+        tfoot td {
+            padding: 12px;
+        }
+
+        .summary-row {
+            background: #bee3f8;
+            font-weight: bold;
+        }
+
+        .summary-row td {
+            padding: 14px;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Project Progress – January 2026</h1>
+
+<table>
+
+    <!-- Main header -->
+    <thead>
+        <tr>
+            <th rowspan="2">Project / Module</th>
+            <th rowspan="2">Owner</th>
+            <th colspan="4">Week Breakdown</th>
+            <th rowspan="2">Progress</th>
+            <th rowspan="2">Risk / Notes</th>
+        </tr>
+        <tr>
+            <th>Wk 1</th>
+            <th>Wk 2</th>
+            <th>Wk 3</th>
+            <th>Wk 4</th>
+        </tr>
+    </thead>
+
+    <tbody>
+
+        <!-- Group: Frontend -->
+        <tr class="group-header">
+            <td colspan="8">Frontend Development</td>
+        </tr>
+
+        <tr>
+            <td>Landing Page + Hero</td>
+            <td class="progress-cell">Sarah</td>
+            <td class="status-done">Done</td>
+            <td class="status-review">Review</td>
+            <td colspan="2">—</td>
+            <td class="status-done progress-cell">100%</td>
+            <td class="notes">Waiting for copy</td>
+        </tr>
+
+        <tr>
+            <td rowspan="2">Dashboard UI Components</td>
+            <td class="progress-cell" rowspan="2">Mike & Tunde</td>
+            <td class="status-started">Started</td>
+            <td class="status-progress">In progress</td>
+            <td class="status-testing">Testing</td>
+            <td>—</td>
+            <td class="progress-cell" rowspan="2">75%</td>
+            <td class="notes" rowspan="2">Chart library decision pending</td>
+        </tr>
+        <tr>
+            <td colspan="3">—</td>
+            <td class="status-done">Done</td>
+        </tr>
+
+        <!-- Group: Backend -->
+        <tr class="group-header">
+            <td colspan="8">Backend & API</td>
+        </tr>
+
+        <tr>
+            <td>User Authentication</td>
+            <td class="progress-cell">Abdul</td>
+            <td class="status-done">Done</td>
+            <td class="status-done">Done</td>
+            <td colspan="2">—</td>
+            <td class="status-done progress-cell">100%</td>
+            <td class="notes">JWT + refresh tokens</td>
+        </tr>
+
+        <tr>
+            <td rowspan="3">Core API Endpoints</td>
+            <td class="progress-cell" rowspan="3">Abdul + Kemi</td>
+            <td>Planning</td>
+            <td class="status-started">Started</td>
+            <td class="status-progress">In progress</td>
+            <td class="status-testing">Testing</td>
+            <td class="progress-cell" rowspan="3">60%</td>
+            <td class="notes" rowspan="3">
+                8/13 endpoints ready<br>Missing: analytics, notifications
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">—</td>
+        </tr>
+
+        <!-- Summary row -->
+        <tr class="summary-row">
+            <td colspan="6">Overall Project Status</td>
+            <td class="progress-cell">78%</td>
+            <td>
+                On track • Main risk: API documentation delay
+            </td>
+        </tr>
+
+    </tbody>
+
+    <tfoot>
+        <tr>
+            <td colspan="8">
+                Last updated: January 14, 2026 • Next review meeting: Jan 21
+            </td>
+        </tr>
+    </tfoot>
+
+</table>
+
+</body>
+</html>

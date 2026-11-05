@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectrum Digital | Live Build</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @keyframes blob {
+            0% { transform: translate(0px, 0px) scale(1); }
+            33% { transform: translate(30px, -50px) scale(1.1); }
+            66% { transform: translate(-20px, 20px) scale(0.9); }
+            100% { transform: translate(0px, 0px) scale(1); }
+        }
+        .animate-blob { animation: blob 7s infinite; }
+        .animation-delay-2000 { animation-delay: 2s; }
+        .animation-delay-4000 { animation-delay: 4s; }
+    </style>
+</head>
+<body class="bg-slate-950 antialiased overflow-x-hidden">
+
+    <input type="checkbox" id="mobile-menu-toggle" class="peer hidden" />
+
+    <div class="fixed inset-0 overflow-hidden -z-10">
+        <div class="absolute top-[-10%] left-[-10%] w-[50%] h-[50%] bg-fuchsia-600/20 rounded-full blur-[120px] animate-blob"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[50%] h-[50%] bg-cyan-500/20 rounded-full blur-[120px] animate-blob animation-delay-2000"></div>
+    </div>
+
+    <aside class="fixed top-0 right-0 z-[100] h-full w-80 bg-slate-900 border-l border-white/10 p-10 transform translate-x-full peer-checked:translate-x-0 transition-transform duration-500 ease-in-out">
+        <div class="flex flex-col h-full text-white">
+            <div class="flex justify-between items-center mb-16">
+                <span class="font-black text-2xl text-cyan-400">MENU</span>
+                <label for="mobile-menu-toggle" class="cursor-pointer p-2 hover:bg-white/10 rounded-full">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
+                </label>
+            </div>
+            <nav class="flex flex-col gap-8">
+                <a href="#" class="text-4xl font-black hover:text-fuchsia-500 transition-colors">HOME</a>
+                <a href="#" class="text-4xl font-black hover:text-cyan-400 transition-colors">WORK</a>
+                <a href="#" class="text-4xl font-black hover:text-amber-400 transition-colors">LABS</a>
+            </nav>
+            <div class="mt-auto">
+                <button class="w-full bg-gradient-to-r from-cyan-500 to-fuchsia-600 py-4 rounded-xl font-bold shadow-lg shadow-cyan-500/20">CONTACT US</button>
+            </div>
+        </div>
+    </aside>
+
+    <nav class="fixed top-6 left-1/2 -translate-x-1/2 z-50 w-[90%] max-w-6xl bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl px-8 py-4 flex items-center justify-between shadow-2xl">
+        <div class="flex items-center gap-3">
+            <div class="w-10 h-10 bg-gradient-to-tr from-cyan-400 to-fuchsia-500 rounded-lg shadow-[0_0_15px_rgba(34,211,238,0.5)]"></div>
+            <span class="text-white font-black text-2xl tracking-tighter">SPECTRUM</span>
+        </div>
+
+        <div class="hidden md:flex gap-10 text-white/70 text-sm font-bold uppercase tracking-widest">
+            <a href="#" class="hover:text-cyan-400 transition-colors">Experience</a>
+            <a href="#" class="hover:text-fuchsia-500 transition-colors">Studio</a>
+            <a href="#" class="hover:text-amber-400 transition-colors">About</a>
+        </div>
+
+        <div class="flex items-center gap-4">
+            <button class="hidden md:block px-6 py-2 bg-white text-black rounded-full font-black text-xs hover:bg-cyan-400 transition-all active:scale-95">START PROJECT</button>
+            <label for="mobile-menu-toggle" class="md:hidden p-2 text-white cursor-pointer bg-white/10 rounded-xl">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"/></svg>
+            </label>
+        </div>
+    </nav>
+
+    <main class="relative pt-40 pb-20 px-6 flex flex-col items-center text-center">
+        <div class="px-4 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/30 text-cyan-400 text-[10px] font-black tracking-[0.4em] uppercase mb-8">
+            Live Development Environment
+        </div>
+
+        <h1 class="text-6xl md:text-[140px] font-black text-white leading-[0.8] tracking-tighter mb-12">
+            COLORS <br />
+            <span class="bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-fuchsia-500 to-amber-400">SPECTACULAR.</span>
+        </h1>
+
+        <p class="text-white/40 text-lg md:text-2xl max-w-2xl leading-relaxed mb-12">
+            A full spectrum utility build showcasing <span class="text-white">gradients</span>, <span class="text-white font-bold">glassmorphism</span>, and interactive sidebar transitions.
+        </p>
+
+        <div class="flex flex-col sm:flex-row gap-6">
+            <button class="px-12 py-5 bg-cyan-500 text-black font-black rounded-2xl shadow-[0_0_40px_rgba(6,182,212,0.4)] hover:bg-white transition-all hover:-translate-y-1">
+                GET THE CODE
+            </button>
+            <button class="px-12 py-5 bg-white/5 border border-white/20 text-white font-black rounded-2xl backdrop-blur-md hover:bg-white/10 transition-all">
+                LEARN MORE
+            </button>
+        </div>
+    </main>
+
+    <section class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-6 pb-32">
+        <div class="p-1 rounded-[2.5rem] bg-gradient-to-b from-cyan-500 to-transparent">
+            <div class="bg-slate-900 rounded-[2.4rem] p-10 h-full">
+                <div class="w-14 h-14 bg-cyan-500/20 text-cyan-400 rounded-2xl flex items-center justify-center mb-8 border border-cyan-500/50">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+                </div>
+                <h3 class="text-white font-black text-2xl mb-4">COLOR_01</h3>
+                <p class="text-white/40">Leveraging the Cyan-500 utility for primary visual feedback.</p>
+            </div>
+        </div>
+
+        <div class="p-1 rounded-[2.5rem] bg-gradient-to-b from-fuchsia-500 to-transparent">
+            <div class="bg-slate-900 rounded-[2.4rem] p-10 h-full">
+                <div class="w-14 h-14 bg-fuchsia-500/20 text-fuchsia-400 rounded-2xl flex items-center justify-center mb-8 border border-fuchsia-500/50">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                </div>
+                <h3 class="text-white font-black text-2xl mb-4">COLOR_02</h3>
+                <p class="text-white/40">Using Fuchsia-600 to drive engagement and visual "pop".</p>
+            </div>
+        </div>
+
+        <div class="p-1 rounded-[2.5rem] bg-gradient-to-b from-amber-400 to-transparent">
+            <div class="bg-slate-900 rounded-[2.4rem] p-10 h-full">
+                <div class="w-14 h-14 bg-amber-400/20 text-amber-400 rounded-2xl flex items-center justify-center mb-8 border border-amber-400/50">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg>
+                </div>
+                <h3 class="text-white font-black text-2xl mb-4">COLOR_03</h3>
+                <p class="text-white/40">Amber-400 utilized for high-visibility highlights and alerts.</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>

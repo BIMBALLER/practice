@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dock Receipt Exact Replica</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Caveat:wght@400&display=swap');
+        
+        body {
+            font-family: 'Courier Prime', monospace;
+            background-color: #d1d5db;
+            padding: 20px;
+            -webkit-print-color-adjust: exact;
+        }
+
+        .receipt-page {
+            width: 850px;
+            background-color: white;
+            margin: 0 auto;
+            padding: 30px 40px;
+            border: 1.5px solid black;
+            position: relative;
+            min-height: 1080px;
+        }
+
+        /* Handwritten mark sitting exactly on the description table bottom border */
+        .gribs-mark {
+            font-family: 'Caveat', cursive;
+            position: absolute;
+            top: 712px; 
+            left: 480px;
+            font-size: 52px;
+            font-weight: 400;
+            color: rgba(0, 0, 0, 0.45);
+            transform: rotate(-1deg);
+            z-index: 60;
+            letter-spacing: -1px;
+            text-transform: lowercase;
+        }
+
+        .border-main { border: 1.5px solid black; }
+        .border-r-main { border-right: 1.5px solid black; }
+        .border-b-main { border-bottom: 1.5px solid black; }
+        .border-l-main { border-left: 1.5px solid black; }
+        .border-t-main { border-top: 1.5px solid black; }
+
+        .stamp-container {
+            position: absolute;
+            bottom: 20px; 
+            right: 40px;
+            z-index: 50;
+        }
+
+        .red-stamp {
+            border: 5px double #dc2626;
+            padding: 8px 15px;
+            color: #dc2626;
+            font-weight: 900;
+            text-align: center;
+            background: white;
+            transform: rotate(-1.5deg);
+            min-width: 280px;
+        }
+
+        .solid-line {
+            border-bottom: 1.5px solid black;
+            flex-grow: 1;
+            margin-left: 8px;
+            height: 18px;
+        }
+
+        .field-label { font-size: 8px; font-weight: 800; color: #1f2937; }
+        .field-value { font-size: 11px; font-weight: 700; margin-top: 2px; }
+    </style>
+</head>
+<body>
+
+    <div class="receipt-page uppercase text-black tracking-tighter border-main">
+        
+        <div class="gribs-mark">gribs</div>
+
+        <div class="flex justify-between items-end border-b-main pb-2 mb-0">
+            <div class="leading-none">
+                <div class="text-5xl font-black italic">BRUNN</div>
+                <div class="text-[10px] font-bold mt-1">LOGISTICS & GLOBAL SHIPPING SOLUTIONS</div>
+            </div>
+            <div class="text-right">
+                <div class="text-3xl font-black">DOCK RECEIPT</div>
+                <div class="text-[10px] font-bold">NON-NEGOTIABLE</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 border-l-main">
+            <div class="border-r-main border-b-main p-2 h-24">
+                <span class="field-label">1. SHIPPER / EXPORTER</span>
+                <div class="field-value">
+                    VERMOUT MUTUAL INS<br>
+                    380 MYRICKS ST. TEL: (508) 223-2341<br>
+                    EAST TAUNTON, MA 02718, UNITED STATES
+                </div>
+            </div>
+            <div class="grid grid-cols-2">
+                <div class="border-r-main border-b-main p-2">
+                    <span class="field-label">2. DOCUMENT NUMBER</span>
+                    <div class="text-lg font-black mt-1">SLSE-101862</div>
+                </div>
+                <div class="border-b-main p-2">
+                    <span class="field-label">5. B/L OR AWB NUMBER</span>
+                    <div class="text-lg font-black mt-1">SLSE-101882</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 border-l-main">
+            <div class="border-r-main border-b-main p-2 h-28">
+                <span class="field-label">3. CONSIGNED TO</span>
+                <div class="field-value">
+                    HAM'SAL INTL NIGERIA RESOURCES<br>
+                    NO 2 SECRETARIAT ROAD, OFFA<br>
+                    KWARA STATE NIGERIA<br>
+                    TEL: 08131519588
+                </div>
+            </div>
+            <div class="border-r-main border-b-main p-2">
+                <span class="field-label">7. FORWARDING AGENT / FMC NO.</span>
+                <div class="field-value">
+                    MESSAGE CARGO SYSTEMS<br>
+                    FMC# 026985NF<br>
+                    ELIZABETH, NJ 07206
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-2 border-l-main">
+            <div class="border-r-main border-b-main p-2 h-28">
+                <span class="field-label">4. NOTIFY PARTY</span>
+                <div class="field-value">
+                    BEFOOM LLC<br>
+                    8308 LIBERTY ROAD, SUITE 165<br>
+                    ALTON, MD 38594, UNITED STATES<br>
+                    TEL: AAR-TES-ST94
+                </div>
+            </div>
+            <div class="border-r-main border-b-main p-2">
+                <span class="field-label">9. DOMESTIC ROUTING / EXPORT INSTRUCTIONS</span>
+                <div class="field-value text-[9px]">
+                    DELIVER TO PIER 10 BALTIMORE.<br>
+                    CLEAN ON BOARD REQUIRED.<br>
+                    AES ITN FILED: X20230324825257
+                </div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-4 border-l-main">
+            <div class="border-r-main border-b-main p-1 h-14">
+                <span class="field-label">12. PRE-CARRIAGE BY</span>
+                <div class="field-value">TRUCK</div>
+            </div>
+            <div class="border-r-main border-b-main p-1">
+                <span class="field-label">13. PLACE OF RECEIPT</span>
+                <div class="field-value">EAST TAUNTON, MA</div>
+            </div>
+            <div class="border-r-main border-b-main p-1">
+                <span class="field-label">10. LOADING PIER / TERMINAL</span>
+                <div class="field-value">BALTIMORE PIER 10</div>
+            </div>
+            <div class="border-b-main p-1">
+                <span class="field-label">11. TYPE OF MOVE</span>
+                <div class="field-value">RO/RO</div>
+            </div>
+        </div>
+
+        <div class="grid grid-cols-4 border-l-main">
+            <div class="border-r-main border-b-main p-1 h-14">
+                <span class="field-label">14. EXPORTING CARRIER</span>
+                <div class="field-value">SILVER GLORY</div>
+            </div>
+            <div class="border-r-main border-b-main p-1">
+                <span class="field-label">15. PORT OF LOADING</span>
+                <div class="field-value">BALTIMORE, MD</div>
+            </div>
+            <div class="border-r-main border-b-main p-1">
+                <span class="field-label">16. FOREIGN PORT</span>
+                <div class="field-value">LAGOS, NIGERIA</div>
+            </div>
+            <div class="border-b-main p-1">
+                <span class="field-label">17. PLACE OF DELIVERY</span>
+                <div class="field-value">TINCAN ISLAND</div>
+            </div>
+        </div>
+
+        <div class="border-l-main border-r-main border-b-main min-h-[380px] relative">
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr class="border-b-main text-center text-[8px] font-black">
+                        <th class="border-r-main w-24 p-1">MARKS & NOS.</th>
+                        <th class="border-r-main w-16 p-1">QTY</th>
+                        <th class="border-r-main p-1 text-left px-4">DESCRIPTION OF COMMODITIES</th>
+                        <th class="border-r-main w-28 p-1">GROSS WEIGHT</th>
+                        <th class="w-24 p-1">MEASUREMENT</th>
+                    </tr>
+                </thead>
+                <tbody class="text-[12px] font-bold">
+                    <tr class="align-top">
+                        <td class="border-r-main p-2 h-[350px] text-center text-[10px]">
+                            SHIPPING<br>MARKS:<br>OFF/NIG/2025
+                        </td>
+                        <td class="border-r-main p-2 text-center text-xl pt-10 font-black">
+                            1<br><span class="text-sm">UNIT</span>
+                        </td>
+                        <td class="border-r-main p-5 pt-10">
+                            <div class="text-left">
+                                <p class="text-xl font-black">2013 TOYOTA RAV 4</p>
+                                <p class="mt-1">COLOR: SILVER / AUTOMATIC</p>
+                                <p class="mt-1">VIN: 2T3BFREV6DW555111</p>
+                                <p class="mt-6 text-sm underline">AES ITN: X20230324825257</p>
+                                <p class="mt-2 text-black font-bold">*** NON RUNNER / NO BRAKES ***</p>
+                            </div>
+                        </td>
+                        <td class="border-r-main p-2 text-right pt-10 leading-relaxed">
+                            1,587.57 KGS<br>
+                            3,500.00 LBS
+                        </td>
+                        <td class="p-2 text-right pt-10">
+                            458.00 CFT<br>
+                            12.96 CBM
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="grid grid-cols-2 border-l-main border-r-main border-b-main h-[280px] relative">
+            <div class="p-3 border-r-main flex flex-col justify-between">
+                <div>
+                    <div class="text-center font-black text-[10px] mb-4">DELIVERED BY:</div>
+                    <div class="space-y-3">
+                        <div class="flex items-end"><span class="field-label">LIGHTER / TRUCK:</span><div class="solid-line"></div></div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="flex items-end"><span class="field-label">ARRIVED DATE:</span><div class="solid-line"></div></div>
+                            <div class="flex items-end"><span class="field-label">TIME:</span><div class="solid-line"></div></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2">
+                            <div class="flex items-end"><span class="field-label">UNLOADED DATE:</span><div class="solid-line"></div></div>
+                            <div class="flex items-end"><span class="field-label">TIME:</span><div class="solid-line"></div></div>
+                        </div>
+                        <div class="flex items-end"><span class="field-label">CHECKED BY:</span><div class="solid-line"></div></div>
+                    </div>
+                </div>
+                <div class="text-[7px] font-bold leading-tight mt-4">
+                    PLACED: [ ] IN SHIP [ ] ON DOCK LOCATION: _________________
+                </div>
+            </div>
+
+            <div class="p-4 relative">
+                <div class="text-[7px] leading-[10px] font-bold text-justify">
+                    RECEIVED THE ABOVE DESCRIBED GOODS OR PACKAGES SUBJECT TO ALL THE TERMS OF THE CARRIER'S REGULAR FORM OF BILL OF LADING. THE GOODS OR PACKAGES ARE IN APPARENT GOOD ORDER AND CONDITION UNLESS OTHERWISE STATED HEREIN. ANY RECEIPT GIVEN WITHOUT REMARK BY THE CARRIER OR HIS AGENT SHALL BE PRIMA FACIE EVIDENCE OF THE RECEIPT BY THE CARRIER OR HIS AGENT OF THE GOODS OR PACKAGES AS DESCRIBED HEREIN.
+                </div>
+
+                <div class="stamp-container">
+                    <div class="text-[10px] font-black italic leading-tight mb-1">
+                        FOR THE MASTER:<br>
+                        <span class="text-[8px] not-italic">RECEIVING CLERK</span>
+                    </div>
+                    <div class="red-stamp">
+                        <p class="text-4xl tracking-widest leading-none font-black flex items-baseline justify-center">
+                            <span class="text-5xl">R</span>ECEIVE<span class="text-5xl">D</span>
+                        </p>
+                        <div class="h-[1.5px] bg-red-600 my-1"></div>
+                        <p class="text-xl">MARCH 24, 2025</p>
+                        <div class="h-[1.5px] bg-red-600 my-1"></div>
+                        <div class="mt-1 text-left text-[9px] font-bold">By: <span class="border-b border-red-500 w-32 inline-block"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-2 flex justify-between px-1 text-[8px] font-bold italic text-gray-500">
+            <span>PRINTED VIA MESSAGE CARGO SYSTEMS - WWW.MCSOPS.COM</span>
+            <span>DATE: MARCH 24, 2025 14:22:10</span>
+        </div>
+    </div>
+
+</body>
+</html>

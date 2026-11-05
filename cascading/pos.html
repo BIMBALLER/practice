@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Positioning explained with a Navbar</title>
+  <link rel="stylesheet" href="pos.css">
+</head>
+<body>
+
+  <!-- 1. Sticky navbar (most common modern use-case) -->
+  <nav class="navbar sticky">
+    <div class="container">
+      <a href="#" class="logo">SchoolSite</a>
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Courses</a></li>
+        <li><a href="#" class="btn">Sign Up</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero / banner area -->
+  <header class="hero">
+    <h1>Welcome to our school website</h1>
+    <p>Scroll down to see different positioning behaviors</p>
+  </header>
+
+  <main class="content">
+
+    <!-- 2. Relative + Absolute example (logo badge / notification) -->
+    <section class="card relative-absolute-example">
+      <h2>position: relative + absolute</h2>
+      <p>Most common combo: parent = relative, child = absolute</p>
+      
+      <div class="profile relative">
+        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150" alt="Student" class="avatar">
+        <span class="badge absolute">New!</span>
+      </div>
+      
+      <p class="explanation">
+        → The badge is taken out of normal flow and positioned relative to the .profile (because parent has position: relative)
+      </p>
+    </section>
+
+
+    <!-- 3. Fixed element (chat button example) -->
+    <div class="fixed-chat">
+      <button>Chat with us</button>
+    </div>
+
+
+    <!-- 4. Sticky sidebar example -->
+    <div class="two-column">
+      <aside class="sidebar sticky">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Calendar</a></li>
+          <li><a href="#">Assignments</a></li>
+          <li><a href="#">Grades</a></li>
+        </ul>
+      </aside>
+
+      <article class="main-content">
+        <h2>Main content area</h2>
+        <p>Scroll down...</p>
+        <div style="height: 120vh; background: linear-gradient(#f0f4f8, #e0e7ff); margin: 2rem 0;">
+          <!-- tall content to force scrolling -->
+          <p style="padding: 4rem;">Keep scrolling ↓<br>→ sidebar will stick at top: 80px</p>
+        </div>
+        <p>Notice how the sidebar stops sticking when you reach the bottom of its parent container.</p>
+      </article>
+    </div>
+
+  </main>
+
+</body>
+</html>

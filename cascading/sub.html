@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dropdown with Sub-Dropdowns</title>
+  <link rel="stylesheet" href="sub.css">
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <a href="#" class="logo">MySchool</a>
+      
+      <ul class="nav-menu">
+        <li><a href="#">Home</a></li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Courses ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Web Development</a>
+            <a href="#">Data Science</a>
+            
+            <!-- Sub-Dropdown -->
+            <div class="sub-dropdown">
+              <a href="#" class="sub-dropbtn">Design Courses ▾</a>
+              <div class="sub-dropdown-content">
+                <a href="#">UI/UX Design</a>
+                <a href="#">Graphic Design</a>
+                <a href="#">Motion Design</a>
+              </div>
+            </div>
+            
+            <a href="#">Mobile App Development</a>
+            <a href="#">Cybersecurity</a>
+          </div>
+        </li>
+        
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Services ▾</a>
+          <div class="dropdown-content">
+            <a href="#">Bootcamps</a>
+            <a href="#">Mentorship</a>
+            
+            <!-- Another Sub-Dropdown -->
+            <div class="sub-dropdown">
+              <a href="#" class="sub-dropbtn">Corporate Training ▾</a>
+              <div class="sub-dropdown-content">
+                <a href="#">Team Building</a>
+                <a href="#">Leadership Skills</a>
+                <a href="#">Digital Transformation</a>
+              </div>
+            </div>
+            
+            <a href="#">Career Coaching</a>
+          </div>
+        </li>
+        
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+</body>
+</html>

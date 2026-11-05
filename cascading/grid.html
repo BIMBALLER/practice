@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Flexbox vs Grid – Teaching Demo</title>
+  <link rel="stylesheet" href="grid.css">
+</head>
+<body>
+
+  <header>
+    <h1>Flexbox vs Grid – Hands-on Playground</h1>
+    <p>Change classes, add properties, or modify values in <code>styles.css</code> to see the differences.</p>
+  </header>
+
+  <main>
+
+    <!-- FLEXBOX EXAMPLES -->
+    <section>
+      <h2>1. Flexbox – Horizontal Row (navbar / cards style)</h2>
+      <div class="container flex-row">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3 – longer content</div>
+        <div class="item">Item 4</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Flexbox – Vertical Column (mobile stack / form)</h2>
+      <div class="container flex-column">
+        <div class="item">Title / Label</div>
+        <div class="item">Main content or input</div>
+        <div class="item">Action button</div>
+      </div>
+    </section>
+
+    <!-- GRID EXAMPLES -->
+    <section>
+      <h2>3. Grid – Equal 3-column layout (gallery / cards)</h2>
+      <div class="container grid-3">
+        <div class="item">Card A</div>
+        <div class="item">Card B</div>
+        <div class="item">Card C</div>
+        <div class="item full-span">This item spans all columns</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Grid – Classic page layout structure</h2>
+      <div class="container grid-layout">
+        <div class="item header">Header</div>
+        <div class="item sidebar">Sidebar</div>
+        <div class="item main">Main Content Area<br>(can grow tall)</div>
+        <div class="item aside">Aside / Extra Info</div>
+        <div class="item footer">Footer</div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>Try these experiments in <code>styles.css</code>:<br>
+    • Add <code>justify-content: center;</code> to <code>.flex-row</code><br>
+    • Change <code>grid-template-columns</code> in <code>.grid-3</code><br>
+    • Add <code>place-items: center;</code> to a grid container</p>
+  </footer>
+
+</body>
+</html>

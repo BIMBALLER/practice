@@ -1,0 +1,112 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+code {
+  background: #eee;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.container {
+  margin: 40px 0;
+  padding: 24px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+.explanation {
+  background: #e8f4fd;
+  padding: 12px 20px;
+  border-left: 5px solid #3498db;
+  margin: 20px 0;
+  border-radius: 0 6px 6px 0;
+}
+
+.item {
+  background: #3498db;
+  color: white;
+  padding: 20px;
+  margin: 8px;
+  border-radius: 6px;
+  font-weight: bold;
+  text-align: center;
+  min-width: 80px;
+}
+
+.highlight {
+  background: #2ecc71 !important;
+  color: black;
+}
+
+/* Display experiments */
+.display-block .item {
+  display: block;
+}
+
+.display-inline .item {
+  display: inline;
+}
+
+.display-inline-block .item {
+  display: inline-block;
+  width: 140px;
+  height: 100px;
+}
+
+.display-none .hide-me {
+  display: none;
+}
+
+.display-contents .wrapper {
+  display: contents;
+  background: #e74c3c; /* you won't see this because of contents */
+  padding: 10px;
+}
+
+.display-flex {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  background: #ecf0f1;
+  padding: 20px;
+  border: 2px dashed #7f8c8d;
+  border-radius: 8px;
+}
+
+.display-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  background: #f1c40f33;
+  padding: 20px;
+  border: 2px dashed #f39c12;
+  border-radius: 8px;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+footer {
+  text-align: center;
+  margin-top: 60px;
+  font-style: italic;
+  color: #777;
+}

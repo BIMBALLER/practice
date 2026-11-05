@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>let, const, and var - Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>let, const, and var Explained</h1>
+
+  <div class="box">
+    <h2>1. const (Best Choice)</h2>
+    <p>Use <code>const</code> when the value should not change.</p>
+    <button onclick="demoConst()">Try const</button>
+    <div id="constOutput" class="output">Click the button to see...</div>
+  </div>
+
+  <div class="box">
+    <h2>2. let (Can Change)</h2>
+    <p>Use <code>let</code> when you plan to change the value later.</p>
+    <button onclick="demoLet()">Use let</button>
+    <div id="letOutput" class="output">Click the button to see...</div>
+  </div>
+
+  <div class="box">
+    <h2>3. var (Old & Problematic)</h2>
+    <p>Old way of declaring variables. We usually avoid it now.</p>
+    <button onclick="demoVar()">Try var</button>
+    <div id="varOutput" class="output">Click the button to see...</div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

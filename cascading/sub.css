@@ -1,0 +1,135 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop') no-repeat center center fixed;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.navbar {
+  background: #1e3a8a;
+  padding: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 12px 0;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background: white;
+  min-width: 220px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  top: 100%;
+  left: 0;
+  padding: 10px 0;
+  margin-top: 5px;
+}
+
+.dropdown-content a {
+  color: #1f2937;
+  padding: 12px 20px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background: #f1f5f9;
+}
+
+.sub-dropdown {
+  position: relative;
+}
+
+.sub-dropbtn {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-dropdown-content {
+  display: none;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  background: white;
+  min-width: 200px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  border-radius: 8px;
+  padding: 8px 0;
+  margin-left: 8px;
+}
+
+.sub-dropdown-content a {
+  padding: 12px 20px;
+}
+
+.sub-dropdown:hover .sub-dropdown-content,
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover > .dropbtn,
+.sub-dropdown:hover > .sub-dropbtn {
+  color: #60a5fa;
+}
+
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .dropdown-content,
+  .sub-dropdown-content {
+    position: static;
+    box-shadow: none;
+    background: #1e40af;
+    margin: 5px 0;
+  }
+  
+  .dropdown-content a,
+  .sub-dropdown-content a {
+    color: white;
+  }
+}

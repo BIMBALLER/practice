@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lesson 5: Events</title>
+  <link rel="stylesheet" href="click.css">
+</head>
+<body>
+  <h1>Lesson 5: Events & Event Listeners</h1>
+
+  <div class="container">
+    <!-- Example 1: Click Event -->
+    <div class="box">
+      <h2>1. Click Event</h2>
+      <button id="clickBtn">Click Me</button>
+      <p id="clickResult">Button not clicked yet</p>
+    </div>
+
+    <!-- Example 2: Input Event -->
+    <div class="box">
+      <h2>2. Input Event</h2>
+      <input type="text" id="nameInput" placeholder="Type your name..." />
+      <p id="inputResult">Waiting for input...</p>
+    </div>
+
+    <!-- Example 3: Multiple Events -->
+    <div class="box">
+      <h2>3. Mouse Events</h2>
+      <div id="hoverBox" class="hover-box">Hover over me</div>
+      <p id="hoverResult"></p>
+    </div>
+  </div>
+
+  <script src="click.js"></script>
+</body>
+</html>

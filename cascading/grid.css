@@ -1,0 +1,106 @@
+/* Reset & base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  background: #f9fafb;
+  color: #111827;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+h1 {
+  color: #1d4ed8;
+  margin-bottom: 0.5rem;
+}
+
+h2 {
+  color: #1e40af;
+  margin: 3rem 0 1.2rem;
+  font-size: 1.6rem;
+}
+
+.container {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  margin-bottom: 2rem;
+}
+
+.item {
+  background: #3b82f6;
+  color: white;
+  padding: 24px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 8px;
+  min-height: 80px;
+  display: grid;
+  place-items: center;
+}
+
+/* ──────────────── FLEXBOX EXAMPLES ──────────────── */
+
+.flex-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/* ──────────────── GRID EXAMPLES ──────────────── */
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.full-span {
+  grid-column: 1 / -1;
+}
+
+.grid-layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 280px;
+  grid-template-rows: auto 1fr auto;
+  grid-template-areas:
+    "header  header  header"
+    "sidebar main    aside"
+    "footer  footer  footer";
+  gap: 20px;
+  min-height: 520px;
+}
+
+.header   { grid-area: header; background: #60a5fa; }
+.sidebar  { grid-area: sidebar; background: #60a5fa; }
+.main     { grid-area: main;    background: #60a5fa; }
+.aside    { grid-area: aside;   background: #60a5fa; }
+.footer   { grid-area: footer;  background: #60a5fa; }
+
+/* Footer note */
+footer {
+  text-align: center;
+  margin-top: 5rem;
+  color: #4b5563;
+  font-size: 0.95rem;
+}

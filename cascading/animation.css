@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: system-ui, sans-serif;
+  background: #f0f4f8;
+  padding: 30px;
+  line-height: 1.6;
+}
+
+h1 {
+  text-align: center;
+  color: #1e3a8a;
+  margin-bottom: 40px;
+}
+
+.demo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.box {
+  background: white;
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+/* ====================== ANIMATIONS ====================== */
+
+.fade-in {
+  animation: fadeIn 1.5s ease forwards;
+}
+
+.slide-in {
+  animation: slideIn 1.2s ease forwards;
+}
+
+.bounce {
+  animation: bounce 1.8s ease infinite;
+}
+
+.rotate {
+  animation: rotate 3s linear infinite;
+}
+
+.pulse {
+  animation: pulse 2s ease-in-out infinite;
+}
+
+/* Keyframes */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-25px); }
+}
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.12); }
+}
+
+/* Extra styling */
+
+h3 {
+  color: #1e40af;
+  margin-bottom: 10px;
+}
+
+.info {
+  max-width: 800px;
+  margin: 50px auto;
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+}
+
+.info ul {
+  margin-top: 15px;
+  padding-left: 20px;
+}

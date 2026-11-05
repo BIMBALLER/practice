@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSS Display Demo - Let's Learn Together!</title>
+  <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+
+  <header>
+    <h1>CSS <code>display</code> Playground</h1>
+    <p>Change the class names in this HTML file and watch what happens in your browser!</p>
+    <p>Try these values: <strong>block</strong>, <strong>inline</strong>, <strong>inline-block</strong>, <strong>flex</strong>, <strong>grid</strong>, <strong>none</strong>, <strong>contents</strong></p>
+  </header>
+
+  <!-- BLOCK -->
+  <section class="container">
+    <h2>1. display: block</h2>
+    <div class="explanation">
+      Each item takes the full width and starts on a new line (default for &lt;div&gt;, &lt;p&gt;, headings, etc.).
+    </div>
+    <div class="display-block">
+      <div class="item">Box 1</div>
+      <div class="item">Box 2</div>
+      <div class="item">Box 3</div>
+    </div>
+  </section>
+
+  <!-- INLINE -->
+  <section class="container">
+    <h2>2. display: inline</h2>
+    <div class="explanation">
+      Items stay in one line like text. Width & height are ignored.
+    </div>
+    <div class="display-inline">
+      <span class="item">A</span>
+      <span class="item">B</span>
+      <span class="item">C is longer</span>
+      <span class="item">D</span>
+    </div>
+  </section>
+
+  <!-- INLINE-BLOCK -->
+  <section class="container">
+    <h2>3. display: inline-block</h2>
+    <div class="explanation">
+      Behaves like inline but respects width, height, margin, padding — perfect for buttons/cards.
+    </div>
+    <div class="display-inline-block">
+      <div class="item">Card 1</div>
+      <div class="item">Card 2</div>
+      <div class="item">Card 3</div>
+    </div>
+  </section>
+
+  <!-- NONE & CONTENTS -->
+  <section class="container">
+    <h2>4. display: none vs display: contents</h2>
+    <div class="display-none">
+      <p>Visible text → <span class="item hide-me">I'm hidden (display: none)</span> ← space is gone</p>
+    </div>
+    <div class="display-contents">
+      <div class="wrapper">
+        <div class="item">This</div>
+        <div class="item highlight">box</div>
+        <div class="item">is now a direct child</div>
+      </div>
+      <p class="explanation">The wrapper disappeared but its children stayed (display: contents)</p>
+    </div>
+  </section>
+
+  <!-- FLEX -->
+  <section class="container">
+    <h2>5. display: flex</h2>
+    <div class="explanation">
+      Amazing for rows, navigation bars, centering content.
+    </div>
+    <div class="display-flex">
+      <div class="item">One</div>
+      <div class="item">Two</div>
+      <div class="item">Three</div>
+      <div class="item">Four</div>
+    </div>
+  </section>
+
+  <!-- GRID -->
+  <section class="container">
+    <h2>6. display: grid</h2>
+    <div class="explanation">
+      Perfect for 2D layouts like galleries or page sections.
+    </div>
+    <div class="display-grid">
+      <div class="item">A</div>
+      <div class="item">B</div>
+      <div class="item">C</div>
+      <div class="item">D</div>
+      <div class="item full-width">Full-width item</div>
+    </div>
+  </section>
+
+  <footer>
+    <p>Experiment time! Open this file in your browser, edit the HTML, save, and refresh. Have fun! 🚀</p>
+  </footer>
+
+</body>
+</html>

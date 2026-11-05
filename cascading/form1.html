@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Signup Form</title>
+  <link rel="stylesheet" href="form1.css">
+</head>
+<body>
+
+  <h1>Create Your Account</h1>
+
+  <form action="#" method="post">
+    
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" required placeholder="Choose a username">
+
+    <label for="email">Email</label>
+    <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+
+    <label for="password">Password</label>
+    <input type="password" id="password" name="password" required placeholder="At least 8 characters">
+
+    <div class="form-row">
+      <div class="form-group">
+        <label for="age">Age</label>
+        <input type="number" id="age" name="age" min="10" max="100" required placeholder="18">
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+234 800 000 0000">
+      </div>
+    </div>
+
+    <label for="country">Country</label>
+    <select id="country" name="country" required>
+      <option value="">-- Select country --</option>
+      <option value="ng">Nigeria</option>
+      <option value="gh">Ghana</option>
+      <option value="ke">Kenya</option>
+      <option value="za">South Africa</option>
+      <option value="other">Other</option>
+    </select>
+
+    <div class="checkbox-group">
+      <input type="checkbox" id="terms" name="terms" required>
+      <label for="terms">I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></label>
+    </div>
+
+    <button type="submit">Sign Up</button>
+
+  </form>
+
+</body>
+</html>

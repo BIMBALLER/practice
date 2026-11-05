@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f8f9fc;
+}
+
+/* Navbar */
+.navbar {
+  background: #1e3a8a;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 10px 0;
+  transition: color 0.3s;
+}
+
+.nav-menu a:hover {
+  color: #60a5fa;
+}
+
+/* Dropdown Styles */
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  cursor: pointer;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  top: 100%;
+  left: 0;
+  z-index: 200;
+  padding: 8px 0;
+  margin-top: 8px;
+}
+
+.dropdown-content a {
+  color: #1f2937;
+  padding: 12px 20px;
+  display: block;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+
+.dropdown-content a:hover {
+  background-color: #f3f4f6;
+  color: #1e40af;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.video-container {
+  max-width: 900px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+video {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .dropdown-content {
+    position: static;
+    box-shadow: none;
+    background-color: #1e40af;
+    padding: 0;
+  }
+  
+  .dropdown-content a {
+    color: white;
+    padding: 10px 20px;
+  }
+}
